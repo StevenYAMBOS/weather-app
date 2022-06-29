@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    Comme mentionné dans l'introduction, RelativeLayout permet aux vues-->
+<!--    d'être positionnées les unes par rapport aux autres et par le parent.-->
+<!--    RelativeLayout est particulièrement utile pour réduire le nombre-->
+<!--    de mises en page imbriquées, ce qui est très important pour réduire-->
+<!--    les besoins de mémoire et de traitement.-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+<!--        LinearLayout est un groupe de vues qui aligne tous les enfants -->
+<!--        dans une seule direction, verticalement ou horizontalement. -->
+<!--        TOUJOURS spécifier le sens de mise en page avec l'attribut android:orientation.-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/adress_container"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/adress"
+                android:textSize="16pt"
+                android:text="Position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
